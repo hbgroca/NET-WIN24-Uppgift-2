@@ -31,8 +31,10 @@
   --clr-logo-text: #0b0f19;
   --clr-navbar-text: #33354d;
 
-  --clr-card-sponsor-background: #ffffff;
+  --clr-card-sponsor-background: transparent;
   --clr-card-sponsor-border: #e2e5f1;
+
+  --clr-background: #ffffff;
 
   /* Nedan är gamla */
 
@@ -54,7 +56,7 @@
 
   --clr-rounded-btn-bg: #f3f6ff;
   --clr-rounded-btn-text: #3e4265;
-  --clr-background: #ffffff;
+
   --clr-background-alt: #f3f6ff;
 
   --clr-bg-hero-top: rgba(242, 245, 252, 0.07);
@@ -90,8 +92,10 @@
   --clr-logo-text: #ffffff;
   --clr-navbar-text: #ffffff;
 
-  --clr-card-sponsor-background: #131022;
+  --clr-card-sponsor-background: transparent;
   --clr-card-sponsor-border: rgba(255, 255, 255, 0.15);
+
+  --clr-background: #0b0f19;
 
   /* Nedan är gamla */
 
@@ -117,7 +121,6 @@
   --clr-text-heading: #ffffff;
   --clr-text: rgba(255, 255, 255, 0.7);
 
-  --clr-background: #171717;
   --clr-background-alt: rgba(255, 255, 255, 0.04);
   --clr-bg-faq: rgba(255, 255, 255, 0.05);
   --clr-border: rgba(255, 255, 255, 0.15);
