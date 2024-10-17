@@ -1,61 +1,70 @@
 /* Hamburger menu button */
-.btn-hamburger-area{
-    position: relative;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    z-index: 99;
-    height: 30px;
-    width: 30px;
-    /* @include desktop{
-        display: none;
-    } */
-    &:hover .btn-hamburger {
-        background-color: var(--clr-primary);
-        &::after, &::before{
-            background-color: var(--clr-primary);
-        }
+.btn-hamburger-area {
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  z-index: 99;
+  height: 30px;
+  width: 30px;
+  &:hover .btn-hamburger {
+    background-color: var(--clr-primary);
+    &::after,
+    &::before {
+      background-color: var(--clr-primary);
     }
+  }
 }
-.btn-hamburger{
+.btn-hamburger {
+  position: absolute;
+  transition: width 500ms ease-in, height 500ms ease-in, rotate 500ms ease-in,
+    top 500ms ease-in, left 500ms ease-in, color 250ms;
+  cursor: pointer;
+  border: none;
+  background-color: var(--clr-rounded-btn-text);
+  width: 22px;
+  height: 2px;
+  top: 14px;
+  left: 4px;
+  &::after,
+  &::before {
+    transition: width 500ms ease-in, height 500ms ease-in, rotate 500ms ease-in,
+      top 500ms ease-in, left 500ms ease-in, color 250ms;
+    content: "";
     position: absolute;
-    transition: width 500ms ease-in,height 500ms ease-in,rotate 500ms ease-in, top 500ms ease-in, left 500ms ease-in, color 250ms;
-    cursor: pointer;
-    border: none;
-    background-color: var(--clr-rounded-btn-text);
+    top: -8px;
+    left: 0;
     width: 22px;
     height: 2px;
-    top: 14px;
-    left: 4px;
-    &::after, &::before{
-        transition: width 500ms ease-in,height 500ms ease-in,rotate 500ms ease-in, top 500ms ease-in, left 500ms ease-in, color 250ms;
-        content: '';
-        position: absolute;
-        top: -8px;
-        left: 0;
-        width: 22px;
-        height: 2px;
-        background-color: var(--clr-rounded-btn-text);
-    }
-    &::before{
-        top: 8px;
-    }
-    
+    background-color: var(--clr-rounded-btn-text);
+  }
+  &::before {
+    top: 8px;
+  }
 }
-.btn-hamburger-active{
-  transition: width 500ms ease-in,height 500ms ease-in,rotate 500ms ease-in, top 500ms ease-in, left 500ms ease-in, color 250ms;
+.btn-hamburger-active {
+  transition: width 500ms ease-in, height 500ms ease-in, rotate 500ms ease-in,
+    top 500ms ease-in, left 500ms ease-in, color 250ms;
   rotate: 45deg;
   width: 26px;
   left: 2px;
-  &::after, &::before{
-      transition: width 500ms ease-in,height 500ms ease-in,rotate 500ms ease-in, top 500ms ease-in, left 500ms ease-in, color 250ms;
-      top: 0px;
-      left: 0px;
-      width: 26px;
-      height: 2px;
-      rotate: -90deg;
+  &::after,
+  &::before {
+    transition: width 500ms ease-in, height 500ms ease-in, rotate 500ms ease-in,
+      top 500ms ease-in, left 500ms ease-in, color 250ms;
+    top: 0px;
+    left: 0px;
+    width: 26px;
+    height: 2px;
+    rotate: -90deg;
   }
-  &::before{
-      rotate: 90deg;
+  &::before {
+    rotate: 90deg;
+  }
+}
+
+@media (min-width: 768px) {
+  .btn-hamburger-area {
+    display: none;
   }
 }

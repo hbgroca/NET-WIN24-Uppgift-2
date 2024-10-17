@@ -1,81 +1,82 @@
-.btn-darkmode-container{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+.btn-darkmode-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-.btn-darkmode-text{
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: var(--clr-gray-700);
+.btn-darkmode-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--clr-gray-700);
 }
 
-.btn-darkmode{
-    cursor: pointer;
-    position: relative;
-    border: none;
-    border-radius: 12px;
-    width: 46px;
-    height: 24px;
-    background-color: var(--clr-gray-600);
-    outline: none;
-    
-    &::before{
-        content: '';
-        position:absolute;
-        top: 0px;
-        left: 4px;
-        background-color: var(--clr-primary);
-        width: 16px;
-        height: 18px;
-        border-radius: 50%;
-        z-index: 9;
+.btn-darkmode {
+  cursor: pointer;
+  position: relative;
+  border: none;
+  border-radius: 12px;
+  width: 46px;
+  height: 24px;
+  background-color: var(--clr-gray-600);
+  outline: none;
 
-        opacity: 0;
-    }
-
-    &::after{
-        content: '';
-        position:absolute;
-        top: 2px;
-        left: 2px;
-        background-color: white;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        overflow: hidden;
-        transition: all 500ms ease-in-out;
-    }
-}
-.btn-darkmode-active{
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 4px;
     background-color: var(--clr-primary);
-    &::before{
-        content: '';
-        position:absolute;
-        top: 0px;
-        left: 20px;
-        background-color: var(--clr-primary);
-        width: 17px;
-        height: 18px;
-        border-radius: 50%;
-        z-index: 9;
-        transition: all 1500ms ease-out;
-        transition-delay: 750ms;
-        opacity: 1;
-    }
-    &::after{
-        left:24px;
-        transition: all 500ms ease-out;
-    }
+    width: 16px;
+    height: 18px;
+    border-radius: 50%;
+    z-index: 9;
+
+    opacity: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all 500ms ease-in-out;
+  }
+}
+.btn-darkmode-active {
+  background-color: var(--clr-primary);
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    background-color: var(--clr-primary);
+    width: 17px;
+    height: 18px;
+    border-radius: 50%;
+    z-index: 9;
+    transition: all 1500ms ease-out;
+    transition-delay: 750ms;
+    opacity: 1;
+  }
+  &::after {
+    left: 24px;
+    transition: all 500ms ease-out;
+  }
 }
 
-
-
-.btn-darkmode-text{
-    display: none;
-    color: var(--clr-hero-link-bg) !important;
-    opacity: 0.3;
-    @media(min-width: 566px){
-        display: block;
-    }
+.btn-darkmode-text {
+  display: none;
+  color: var(--clr-hero-link-bg) !important;
+  opacity: 0.3;
+  @media (min-width: 566px) {
+    display: block;
+  }
+  include tablet {
+    display: block;
+  }
 }
