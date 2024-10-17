@@ -1,0 +1,15 @@
+.sponsor-card {
+  width: 160px;
+  height: 100px;
+
+  border: 1px solid #000;
+  border-radius: 0.5rem;
+
+  background-color: var(--clr-card-sponsor-background);
+  border-color: var(--clr-card-sponsor-border);
+
+  display: grid;
+  place-items: center;
+}
+.sponsor-img {
+}

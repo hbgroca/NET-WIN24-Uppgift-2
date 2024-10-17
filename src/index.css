@@ -1,7 +1,7 @@
 :root {
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: var(--clr-bg);
+  /* color-scheme: light dark; */
+  /* color: rgba(255, 255, 255, 0.87); */
+  /* background-color: var(--clr-background); */
 
   --tablet: 575px;
   --tablet-lg: 768px;
@@ -31,7 +31,14 @@
   --clr-logo-text: #0b0f19;
   --clr-navbar-text: #33354d;
 
+  --clr-card-sponsor-background: #ffffff;
+  --clr-card-sponsor-border: #e2e5f1;
+
   /* Nedan är gamla */
+
+  --clr-card-faq: #ffffff;
+  --clr-card-contact: #ffffff;
+  --clr-card-review: #ffffff;
 
   --clr-text-heading: #0b0f19;
   --clr-text: #565973;
@@ -47,8 +54,8 @@
 
   --clr-rounded-btn-bg: #f3f6ff;
   --clr-rounded-btn-text: #3e4265;
-  --clr-bg: #f3f6ff;
-  --clr-bg-alt: #f3f6ff;
+  --clr-background: #ffffff;
+  --clr-background-alt: #f3f6ff;
 
   --clr-bg-hero-top: rgba(242, 245, 252, 0.07);
   --clr-bg-hero-bg: rgba(224, 118, 243, 0.06);
@@ -66,11 +73,6 @@
   --clr-light: #fff;
   --clr-dark: #171717;
 
-  --clr-card-sponsor: #ffffff;
-  --clr-card-faq: #ffffff;
-  --clr-card-contact: #ffffff;
-  --clr-card-review: #ffffff;
-
   --clr-hero-link-text: #fff;
   --clr-hero-link-bg: #131022;
 
@@ -80,13 +82,16 @@
   --clr-features-icon-bg: #eff2fc;
 }
 .dark-mode {
-  background-color: var(--clr-bg);
+  /* background-color: var(--clr-background); */
 
   --clr-primary: #6366f1;
   --clr-secondary: #eff2fc;
 
   --clr-logo-text: #ffffff;
   --clr-navbar-text: #ffffff;
+
+  --clr-card-sponsor-background: #131022;
+  --clr-card-sponsor-border: rgba(255, 255, 255, 0.15);
 
   /* Nedan är gamla */
 
@@ -112,8 +117,8 @@
   --clr-text-heading: #ffffff;
   --clr-text: rgba(255, 255, 255, 0.7);
 
-  --clr-bg: #171717;
-  --clr-bg-alt: rgba(255, 255, 255, 0.04);
+  --clr-background: #171717;
+  --clr-background-alt: rgba(255, 255, 255, 0.04);
   --clr-bg-faq: rgba(255, 255, 255, 0.05);
   --clr-border: rgba(255, 255, 255, 0.15);
 }
@@ -151,6 +156,7 @@ a:hover {
 }
 
 body {
+  background-color: var(--clr-background);
   min-width: 320px;
   min-height: 100svh;
 }
