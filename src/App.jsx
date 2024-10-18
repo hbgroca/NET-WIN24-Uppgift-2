@@ -7,6 +7,7 @@ import Footer from './sections/Footer'
 import Navbar from './sections/Navbar'
 import Sponsors from './sections/Sponsors'
 import Subscribe from './sections/Subscribe'
+import Testimonials from './sections/Testimonials'
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <AppFeatures />
         
         <AppFeatures2 />
+        <Testimonials />
 
         <Subscribe />
       </main>

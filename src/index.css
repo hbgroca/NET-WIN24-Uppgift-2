@@ -42,7 +42,10 @@
   --clr-forms-border: #d4d7e5;
   --clr-forms-placeholder: #b4b7c9;
 
+  --clr-features-icon-bg: #eff2fc;
+
   /* Nedan är gamla */
+
   --clr-border: #e2e5f1;
 
   --clr-card-faq: #ffffff;
@@ -82,7 +85,6 @@
   --clr-rounded-active-bg: var(--clr-btn-bg);
   --clr-rounded-active-text: #ffffff;
   --clr-card-review: #fff;
-  --clr-features-icon-bg: #eff2fc;
 }
 .dark-mode {
   /* background-color: var(--clr-background); */
@@ -105,6 +107,8 @@
   --clr-forms-border: hsla(0, 0%, 100%, 0.18);
   --clr-forms-placeholder: hsla(0, 0%, 100%, 0.4);
 
+  --clr-features-icon-bg: rgba(255, 255, 255, 0.05);
+
   /* Nedan är gamla */
 
   --clr-card-sponsor: #ffffff;
@@ -124,7 +128,6 @@
   --clr-bg-hero-bottom: rgba(99, 101, 241, 0.1);
 
   --clr-card-review: rgba(255, 255, 255, 0.04);
-  --clr-features-icon-bg: rgba(255, 255, 255, 0.05);
 
   --clr-background-alt: rgba(255, 255, 255, 0.04);
   --clr-bg-faq: rgba(255, 255, 255, 0.05);

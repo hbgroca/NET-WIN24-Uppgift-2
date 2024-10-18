@@ -1,0 +1,71 @@
+.reviews {
+  display: none;
+  background-color: var(--clr-background-alt);
+  padding-block: 6rem;
+
+  @media (min-width: 1280px) {
+    display: block;
+  }
+}
+.reviews-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  gap: 2rem;
+
+  @media (min-width: 1280px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+.reviews-header {
+  .reviews-header-text {
+    font-size: 2.125rem;
+    padding: 3rem 0;
+  }
+  @media (min-width: 1280px) {
+    align-self: flex-start;
+    .reviews-header-text {
+      font-size: 2.5rem;
+      padding: 0;
+    }
+  }
+}
+
+/* Card */
+.card-review {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: var(--clr-card-review);
+  padding: 4rem 1.5rem;
+  padding-bottom: 2rem;
+  box-shadow: 0 5px 10px hsla(0, 0%, 0%, 0.212);
+
+  max-width: 415px;
+  min-height: 329px;
+  gap: 1rem;
+
+  border-radius: 0.5rem;
+  position: relative;
+  font-size: 1.125rem;
+  .card-review-quotes {
+    position: absolute;
+    width: 5rem;
+    top: -28px;
+    left: 8px;
+  }
+}
+.card-review-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  h3 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 0.875rem;
+  }
+}
