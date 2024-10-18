@@ -35,6 +35,9 @@
   --clr-card-sponsor-border: #e2e5f1;
 
   --clr-background: #ffffff;
+  --clr-bg-hero-top: rgba(242, 245, 252, 0.07);
+  --clr-bg-hero-bg: rgba(224, 118, 243, 0.06);
+  --clr-bg-hero-bottom: rgba(99, 101, 241, 0.1);
 
   --clr-text-heading: #0b0f19;
   --clr-text: #565973;
@@ -62,10 +65,6 @@
   --clr-btn-border: rgba(99, 101, 241, 0.35);
 
   --clr-background-alt: #f3f6ff;
-
-  --clr-bg-hero-top: rgba(242, 245, 252, 0.07);
-  --clr-bg-hero-bg: rgba(224, 118, 243, 0.06);
-  --clr-bg-hero-bottom: rgba(99, 101, 241, 0.1);
 
   --clr-bg-faq: #ffffff;
 
@@ -100,6 +99,9 @@
 
   --clr-background: #0b0f19;
   --clr-background-alt: #f3f6ff;
+  --clr-bg-hero-top: #0b0f19;
+  --clr-bg-hero-bg: rgba(224, 118, 243, 0.05);
+  --clr-bg-hero-bottom: rgba(99, 101, 241, 0.1);
 
   --clr-text-heading: #ffffff;
   --clr-text: rgba(255, 255, 255, 0.7);
@@ -123,10 +125,6 @@
 
   --clr-hero-link-text: #3e4265;
   --clr-hero-link-bg: #eff2fc;
-
-  --clr-bg-hero-top: #171717;
-  --clr-bg-hero-bg: rgba(224, 118, 243, 0.05);
-  --clr-bg-hero-bottom: rgba(99, 101, 241, 0.1);
 
   --clr-card-review: rgba(255, 255, 255, 0.04);
 

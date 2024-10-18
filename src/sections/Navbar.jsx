@@ -18,7 +18,7 @@ export default function Navbar() {
               <h5 className='navbar-logo-text'>Silicon</h5>
           </div>
           <div className="navbar-links">
-              <a href="#Hem" aria-label="Gå till överst på sidan.">Home</a>
+              <a href="#Hem" aria-label="Gå till överst på sidan.">Features</a>
               <a href="#Funktioner" aria-label="Gå till appens funktioner.">Contact</a>
           </div>
       </div>

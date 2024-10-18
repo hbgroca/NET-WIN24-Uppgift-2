@@ -3,6 +3,9 @@
   padding-bottom: 4rem;
   place-items: center;
   text-align: center;
+  @media (min-width: 768px) {
+    padding-bottom: 8rem;
+  }
 
   .appfeatures-img {
     display: none;

@@ -23,9 +23,9 @@
 
 .navbar-links {
   display: none;
-  gap: 1rem;
+  gap: 1.5rem;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--clr-navbar-text);
 }
 

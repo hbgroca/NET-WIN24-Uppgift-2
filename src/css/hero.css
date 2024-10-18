@@ -18,6 +18,9 @@
 
   justify-items: center;
   align-items: center;
+  @media (min-width: 768px) {
+    height: calc(100svh - 72px);
+  }
   @media (min-width: 1280px) {
     min-height: 900px;
   }
