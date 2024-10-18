@@ -4,7 +4,7 @@ import '../css/animations.css'
 // Component imports
 import BtnDarkMode from '../components/BtnDarkMode'
 import BtnHamburger from '../components/BtnHamburger'
-import BtnSignIn from '../components/Btn';
+import BtnSignIn from '../components/BtnSignIn';
 
 // Image imports
 import siliconLogo from '/images/svg/navbar/SiliconLogo.svg';

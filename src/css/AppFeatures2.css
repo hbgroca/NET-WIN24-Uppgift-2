@@ -1,0 +1,31 @@
+.features {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: 100%;
+  height: 1080px;
+
+  margin-block: 4rem;
+  @media (min-width: 1280px) {
+    display: grid;
+  }
+}
+
+.features-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  height: 100%;
+
+  h2 {
+    text-wrap: balance;
+  }
+}
+.features-container-img {
+  width: 100%;
+  align-self: center;
+  max-width: 526px;
+  aspect-ratio: 1;
+}

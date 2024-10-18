@@ -6,6 +6,7 @@ import App from './App.jsx'
 import './index.css'
 import './css/utility.css'
 import './css/container.css'
+import './css/buttons.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
