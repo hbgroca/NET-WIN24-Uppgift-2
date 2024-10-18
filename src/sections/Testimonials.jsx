@@ -13,7 +13,6 @@ export default function Testimonials() {
       .then(response => response.json())
       .then(data => setTestimonials(data))
       .catch(error => console.error('Failed to fetch:', error));
-      console.log(testimonials);
   }, []);
 
 
