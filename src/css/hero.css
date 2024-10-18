@@ -1,0 +1,180 @@
+.hero-bg {
+  background: radial-gradient(
+    ellipse at bottom,
+    var(--clr-bg-hero-bottom),
+    var(--clr-bg-hero-bg),
+    var(--clr-bg-hero-top),
+    transparent
+  );
+  background-size: 200%;
+  background-position-x: 50%;
+
+  width: 100%;
+  min-height: 540px;
+  height: calc(100svh - 52px);
+
+  position: relative;
+  display: grid;
+
+  justify-items: center;
+  align-items: center;
+  @media (min-width: 1280px) {
+    min-height: 900px;
+  }
+}
+
+.hero {
+  padding: 0 1rem;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  height: calc(100%);
+  max-height: 1000px;
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-auto-columns: 45% 55%;
+    grid-auto-rows: 30% 70%;
+    gap: 0;
+
+    grid-template-areas:
+      "header header"
+      "info phones";
+  }
+  @media (min-width: 768px) {
+    padding: 0 2rem;
+  }
+  @media (min-width: 1280px) {
+    padding: 0 4rem;
+    grid-auto-rows: 40% 60%;
+
+    grid-template-areas:
+      "header phones"
+      "info phones";
+  }
+}
+
+.hero-header {
+  grid-area: header;
+  max-width: 390px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 4;
+
+  @media (min-width: 768px) {
+    margin: auto;
+    max-width: 450px;
+    h1 {
+      font-size: 3rem;
+    }
+  }
+  @media (min-width: 1280px) {
+    margin: 0;
+    text-align: start;
+  }
+}
+
+.hero-info {
+  flex: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-block: 2rem;
+  grid-area: info;
+  p {
+    text-wrap: balance;
+    font-size: 1.125rem;
+    max-width: 390px;
+  }
+  .hero-info-links {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+  }
+  .hero-info-btn {
+    flex: 1;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  @media (min-width: 768px) {
+    text-align: start;
+    padding: 0rem;
+    padding-block: 4rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 450px;
+    .hero-info-btn-text {
+      font-size: 1.125rem;
+      text-align: start;
+    }
+    .hero-info-links {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+}
+
+.hero-phones {
+  grid-area: phones;
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    div {
+      position: relative;
+      width: 100%;
+      height: 893px;
+      max-width: 540px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .img-left,
+    .img-right {
+      position: absolute;
+      height: 493px;
+      width: 244px;
+      object-fit: cover;
+      display: block;
+      @media (min-width: 1280px) {
+        height: 813px;
+        width: 402px;
+      }
+    }
+    .img-left {
+      content: url("../images/svg/hero/hero-phone-left.svg");
+      left: 0;
+      top: 80px;
+    }
+    .img-right {
+      content: url("../images/svg/hero/hero-phone-right.svg");
+      right: 0;
+      top: 0px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    display: flex;
+    align-items: center;
+  }
+}

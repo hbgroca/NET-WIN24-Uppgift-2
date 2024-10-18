@@ -4,6 +4,7 @@
 import AppFeatures from './sections/AppFeatures'
 import AppFeatures2 from './sections/AppFeatures2'
 import Footer from './sections/Footer'
+import Hero from './sections/Hero'
 import Navbar from './sections/Navbar'
 import Slider from './sections/Slider'
 import Sponsors from './sections/Sponsors'
@@ -19,6 +20,8 @@ function App() {
       </header>
 
       <main>
+        <Hero />
+
         {/* Only in desktop resolution */}
         <Sponsors />
 

@@ -3,7 +3,7 @@
   z-index: 5;
   display: flex;
   justify-content: space-between;
-  height: 76px;
+  height: 52px;
   padding: 1rem;
 }
 .navbar-left,
@@ -30,6 +30,9 @@
 }
 
 @media (min-width: 768px) {
+  .navbar {
+    height: 72px;
+  }
   .navbar-links {
     display: flex;
   }

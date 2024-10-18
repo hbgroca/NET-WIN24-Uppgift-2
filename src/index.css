@@ -44,6 +44,9 @@
 
   --clr-features-icon-bg: #eff2fc;
 
+  --clr-rounded-btn-bg: #f3f6ff;
+  --clr-rounded-btn-text: #3e4265;
+
   /* Nedan är gamla */
 
   --clr-border: #e2e5f1;
@@ -57,9 +60,6 @@
   --clr-btn-bg-secondary: #eff2fc;
   --clr-btn-text-secondary: #33354d;
   --clr-btn-border: rgba(99, 101, 241, 0.35);
-
-  --clr-rounded-btn-bg: #f3f6ff;
-  --clr-rounded-btn-text: #3e4265;
 
   --clr-background-alt: #f3f6ff;
 
@@ -109,14 +109,15 @@
 
   --clr-features-icon-bg: rgba(255, 255, 255, 0.05);
 
+  --clr-rounded-btn-bg: rgba(255, 255, 255, 0.05);
+  --clr-rounded-btn-text: #ffffff;
+
   /* Nedan är gamla */
 
   --clr-card-sponsor: #ffffff;
   --clr-card-faq: #ffffff;
   --clr-card-contact: rgba(255, 255, 255, 0.04);
 
-  --clr-rounded-btn-bg: rgba(255, 255, 255, 0.05);
-  --clr-rounded-btn-text: #ffffff;
   --clr-rounded-active-bg: var(--clr-btn-bg);
   --clr-rounded-active-text: #ffffff;
 
