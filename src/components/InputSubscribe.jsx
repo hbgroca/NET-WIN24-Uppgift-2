@@ -1,4 +1,89 @@
+import { useState, useEffect } from "react";
+
 export default function InputSubscribe() {
+  
+
+  const [email, setEmail] = useState('')
+
+  // Create event listener for email input
+  useEffect (() => {
+    const emailInput = document.getElementById('email-input')
+    emailInput.addEventListener('input', () => {
+      setEmail(emailInput.value)
+    })
+  }, [])
+
+  // Update email state on render
+  useEffect(() => {
+    const emailInput = document.getElementById('email-input')
+    setEmail(emailInput.value)
+  }
+  , )
+
+  // On submit
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    const errorMsgText = document.getElementById('email-error-text')
+    switch(validateEmail(email)){
+      case 'true':
+        // Reset error message
+        errorMsgText.textContent = ''
+
+        // Post email to api
+        const response = postEmail(email);
+
+        // Handle response
+        response.then(response => {
+          if(response === 200){
+            errorMsgText.textContent = 'Tack för att du prenumererar!';
+            setEmail('')
+            document.getElementById('email-input').value = ''
+          } else {
+            errorMsgText.textContent = 'Något gick fel, försök igen senare';
+          }
+        })
+
+        break
+      case 'false':
+        errorMsgText.textContent = 'Ogiltig epost adress'
+        break
+      case 'noInput':
+        errorMsgText.textContent = 'Ange en epost adress'
+        break
+    }
+  }
+
+  // Valdate email
+  function validateEmail(input) {
+    if(input.trim() !== ''){
+      const input = email.trim();
+      const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      const isValidEmail = input => emailRegex.test(input);
+
+      if (!isValidEmail(input)){
+        return 'false'
+      }
+      return 'true'
+    }
+    return 'noInput'
+  }
+
+
+  // Post email to api
+  function postEmail(emailInput) {
+    return fetch('https://win24-assignment.azurewebsites.net/api/forms/subscribe', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ email: emailInput })
+    })
+    .then(response => {
+      return response.status; // Read response as text
+    })
+};
+
 
   return (
     <>
@@ -7,7 +92,8 @@ export default function InputSubscribe() {
               <img src='/images/svg/subscribe/email-svgrepo-com.svg' alt="" aria-hidden="true"></img>
               <input id="email-input" type="email" placeholder="Your email" required></input>
           </div>
-          <input type="submit" value="Subscribe"></input>
+          <input type="submit" value="Subscribe" onClick={handleSubmit}></input>
+          <span id="email-error-text"></span>
       </form>
     </>
   );
