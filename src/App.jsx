@@ -1,8 +1,10 @@
 // Import components
 
 // Import sections
+import Footer from './sections/Footer'
 import Navbar from './sections/Navbar'
 import Sponsors from './sections/Sponsors'
+import Subscribe from './sections/Subscribe'
 
 
 function App() {
@@ -14,7 +16,11 @@ function App() {
 
       <main>
         <Sponsors />
+
+        <Subscribe />
       </main>
+
+      <Footer />
     </>
   )
 }

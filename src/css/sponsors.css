@@ -1,12 +1,11 @@
 .sponsors {
+  /* outline: 1px solid red; */
   display: none;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 
-  outline: 1px solid red;
-
-  padding-inline: 1.5rem;
+  padding: 0.5rem 1.5rem;
 
   @media (min-width: 768px) {
     display: flex;

@@ -36,23 +36,24 @@
 
   --clr-background: #ffffff;
 
+  --clr-text-heading: #0b0f19;
+  --clr-text: #565973;
+
+  --clr-forms-border: #d4d7e5;
+  --clr-forms-placeholder: #b4b7c9;
+
   /* Nedan är gamla */
+  --clr-border: #e2e5f1;
 
   --clr-card-faq: #ffffff;
   --clr-card-contact: #ffffff;
   --clr-card-review: #ffffff;
-
-  --clr-text-heading: #0b0f19;
-  --clr-text: #565973;
 
   --clr-btn-bg: #6366f1;
   --clr-btn-text: #ffffff;
   --clr-btn-bg-secondary: #eff2fc;
   --clr-btn-text-secondary: #33354d;
   --clr-btn-border: rgba(99, 101, 241, 0.35);
-
-  --clr-forms-border: #d4d7e5;
-  --clr-forms-placeholder: #b4b7c9;
 
   --clr-rounded-btn-bg: #f3f6ff;
   --clr-rounded-btn-text: #3e4265;
@@ -64,7 +65,7 @@
   --clr-bg-hero-bottom: rgba(99, 101, 241, 0.1);
 
   --clr-bg-faq: #ffffff;
-  --clr-border: #e2e5f1;
+
   --clr-outline-focus: var(--clr-primary);
 
   --clr-primary-light: #6d7573;
@@ -96,6 +97,13 @@
   --clr-card-sponsor-border: rgba(255, 255, 255, 0.15);
 
   --clr-background: #0b0f19;
+  --clr-background-alt: #f3f6ff;
+
+  --clr-text-heading: #ffffff;
+  --clr-text: rgba(255, 255, 255, 0.7);
+
+  --clr-forms-border: hsla(0, 0%, 100%, 0.18);
+  --clr-forms-placeholder: hsla(0, 0%, 100%, 0.4);
 
   /* Nedan är gamla */
 
@@ -117,9 +125,6 @@
 
   --clr-card-review: rgba(255, 255, 255, 0.04);
   --clr-features-icon-bg: rgba(255, 255, 255, 0.05);
-
-  --clr-text-heading: #ffffff;
-  --clr-text: rgba(255, 255, 255, 0.7);
 
   --clr-background-alt: rgba(255, 255, 255, 0.04);
   --clr-bg-faq: rgba(255, 255, 255, 0.05);
@@ -148,6 +153,36 @@ a {
 a:hover {
   color: var(--clr-primary);
   text-decoration: underline;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--clr-text-heading);
+}
+h2 {
+  font-size: 2rem;
+  color: var(--clr-text-heading);
+}
+h3 {
+  font-size: 1.75rem;
+  color: var(--clr-text-heading);
+}
+h4 {
+  font-size: 1.5rem;
+  color: var(--clr-text-heading);
+}
+h5 {
+  font-size: 1.25rem;
+  color: var(--clr-text-heading);
+}
+h6 {
+  font-size: 1rem;
+  color: var(--clr-text-heading);
+}
+p,
+span,
+label {
+  color: var(--clr-text);
 }
 
 * button:focus-visible,
