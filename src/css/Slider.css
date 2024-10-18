@@ -30,6 +30,7 @@
     display: grid;
     max-width: 670px;
     gap: 1rem;
+    padding-inline: 1rem;
   }
 }
 
