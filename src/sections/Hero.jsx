@@ -35,7 +35,7 @@ export default function Hero() {
                 </a>
             </div>
 
-            <a className="hero-info-btn animate-pulse" href="#Funktioner" aria-label="Gå vidare till funktioner.">
+            <a className="hero-info-btn animate-pulse" href="#features" aria-label="Gå vidare till funktioner.">
                 <button className="btn-rounded btn-rounded-md shadow-md" tabIndex="-1" aria-hidden="true"/>
                 <p>Discover more</p>
             </a>

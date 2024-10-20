@@ -50,6 +50,10 @@
   --clr-rounded-btn-bg: #f3f6ff;
   --clr-rounded-btn-text: #3e4265;
 
+  --clr-btn-bg: #6366f1;
+  --clr-btn-bg-hover: rgba(99, 101, 241, 0.8);
+  --clr-btn-text: #ffffff;
+
   /* Nedan är gamla */
 
   --clr-border: #e2e5f1;
@@ -58,8 +62,6 @@
   --clr-card-contact: #ffffff;
   --clr-card-review: #ffffff;
 
-  --clr-btn-bg: #6366f1;
-  --clr-btn-text: #ffffff;
   --clr-btn-bg-secondary: #eff2fc;
   --clr-btn-text-secondary: #33354d;
   --clr-btn-border: rgba(99, 101, 241, 0.35);

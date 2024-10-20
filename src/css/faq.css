@@ -1,0 +1,78 @@
+.faq {
+  padding-top: 2rem;
+  padding-inline: 1rem;
+  /* margin-top: 5rem; */
+  display: grid;
+  grid-auto-columns: 100%;
+  grid-auto-rows: auto 1fr auto;
+  grid-template-areas:
+    "text"
+    "accordion"
+    "contact";
+
+  place-items: center;
+
+  @media (min-width: 768px) {
+    padding-top: 3rem;
+  }
+  @media (min-width: 1280px) {
+    padding-block: 4rem;
+  }
+
+  .faq-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: text;
+    gap: 1rem;
+    text-align: center;
+    max-width: 360px;
+    text-wrap-style: balance;
+    h4 {
+      font-weight: 700;
+    }
+    p {
+      font-size: 1.125rem;
+    }
+
+    @media (min-width: 768px) {
+      h4 {
+        font-size: 2rem;
+        max-width: 300px;
+      }
+    }
+  }
+
+  .accordion {
+    grid-area: accordion;
+  }
+
+  .faq-contact {
+    grid-area: contact;
+  }
+
+  @media (min-width: 1280px) {
+    grid-auto-columns: 40% 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas:
+      "text accordion"
+      "contact accordion"
+      ". accordion";
+
+    place-items: start;
+
+    .faq-text {
+      text-align: start;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-top: 2rem;
+    }
+  }
+}
+
+.accordion {
+  padding: 1rem;
+  @media (min-width: 1280px) {
+    padding-inline: 0rem;
+  }
+}

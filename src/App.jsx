@@ -3,6 +3,7 @@
 // Import sections
 import AppFeatures from './sections/AppFeatures'
 import AppFeatures2 from './sections/AppFeatures2'
+import Faq from './sections/faq'
 import Footer from './sections/Footer'
 import Hero from './sections/Hero'
 import Navbar from './sections/Navbar'
@@ -30,7 +31,10 @@ function App() {
         <Slider />
         
         <AppFeatures2 />
+
         <Testimonials />
+        
+        <Faq />
 
         <Subscribe />
       </main>

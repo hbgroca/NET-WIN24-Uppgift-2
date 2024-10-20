@@ -3,7 +3,7 @@ import '../css/AppFeatures.css';
 export default function AppFeatures() { 
 
   return(<>
-    <div className="appfeatures container">
+    <div id='features' className="appfeatures container">
       <div className="appfeatures-img"></div>
         <div className="appfeatures-wrapper">
           <div className="appfeatures-text">
