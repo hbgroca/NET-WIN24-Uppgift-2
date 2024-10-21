@@ -27,7 +27,7 @@
 
 .btn:hover {
   transition: 250ms;
-  background-color: hotpink;
+  background-color: var(--clr-btn-bg-hover);
 }
 
 .btn-sm {

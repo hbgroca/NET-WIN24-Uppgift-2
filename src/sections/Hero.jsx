@@ -27,15 +27,15 @@ export default function Hero() {
         <div className="hero-info">
             <p className="hero-info-text">We offer you a new generation of the mobile banking. Save, spend & manage money in your pocket.</p>
             <div className="hero-info-links">
-                <a href="#" className="btn-store" aria-label="Länk till apple store">
+                <a href="#" className="btn-store hover-zoom" aria-label="Länk till apple store">
                     <img id="appleStore" src="./images/svg/hero/appstore-light.svg" alt="Ikon med länk till apple store"/>
                 </a>
-                <a href="#" className="btn-store" aria-label="Länk till google play store">
+                <a href="#" className="btn-store hover-zoom" aria-label="Länk till google play store">
                     <img id="googleStore" src="./images/svg/hero/googleplay-light.svg" alt="Ikon med länk till google play store"/>
                 </a>
             </div>
 
-            <a className="hero-info-btn animate-pulse" href="#features" aria-label="Gå vidare till funktioner.">
+            <a className="hero-info-btn animate-pulse hover-zoom" href="#features" aria-label="Gå vidare till funktioner.">
                 <button className="btn-rounded btn-rounded-md shadow-md" tabIndex="-1" aria-hidden="true"/>
                 <p>Discover more</p>
             </a>

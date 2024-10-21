@@ -17,8 +17,14 @@ export default function Accordion(){
 
     // FAQ Questions open / close function.
     function faqExpand(faqQuestion){
-        const faqClassList = document.getElementById("faq-faqs-" + faqQuestion);
-        faqClassList.classList.toggle('expanded');
+        const faqOpen = document.querySelectorAll('.expanded');
+        faqOpen.forEach(faq => {
+            if (faq.id !== "faq-faqs-" + faqQuestion){
+                faq.classList.remove('expanded');
+            }
+        });
+        const faqToOpen = document.getElementById("faq-faqs-" + faqQuestion);
+        faqToOpen.classList.toggle('expanded');
     }
 
     return (

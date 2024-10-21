@@ -1,3 +1,5 @@
+import Button from '../components/Button';
+
 import ('../css/AppFeatures2.css');
 
 export default function Features2() {

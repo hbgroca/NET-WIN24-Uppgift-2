@@ -3,7 +3,7 @@ import '../css/BtnHamburger.css';
 function BtnHamburger(){
 
   function toggleMenu() {
-    // document.querySelector('.navbar-side').classList.toggle('navbar-side-active');
+    document.querySelector('.navbar-side').classList.toggle('navbar-side-active');
     document.querySelector('.btn-hamburger').classList.toggle('btn-hamburger-active');
   }
 

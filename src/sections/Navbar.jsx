@@ -8,6 +8,8 @@ import BtnSignIn from '../components/BtnSignIn';
 
 // Image imports
 import siliconLogo from '/images/svg/navbar/SiliconLogo.svg';
+import AsideNavMenu from '../components/AsideNavMenu';
+import PopUp from '../components/PopUp/PopUp';
 
 export default function Navbar() {
   return (<>
@@ -32,6 +34,11 @@ export default function Navbar() {
           {/* Log in button */}
           <BtnSignIn input={'Sign in / up'}/>
       </div>
+      {/* Aside nav menu */}
+      <AsideNavMenu />
+
+      {/* Sign in Pop up */}
+      <PopUp />
     </nav>
   </>);
 }
