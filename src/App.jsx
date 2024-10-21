@@ -1,42 +1,30 @@
 // Import components
 
 // Import sections
-import AppFeatures from './sections/AppFeatures'
-import AppFeatures2 from './sections/AppFeatures2'
-import Faq from './sections/faq'
+import ContactPage from './pages/ContactPage';
+import MainPage from './pages/MainPage';
 import Footer from './sections/Footer'
-import Hero from './sections/Hero'
 import Navbar from './sections/Navbar'
-import Slider from './sections/Slider'
-import Sponsors from './sections/Sponsors'
-import Subscribe from './sections/Subscribe'
-import Testimonials from './sections/Testimonials'
 
+
+import React, { useState } from 'react';
 
 function App() {
+
+  const [darkMode, setDarkMode] = useState(false);
+
   return (
     <>
       <header>
-        <Navbar />
+        {/* Navbar, sens darkmode state down to button */}
+        <Navbar darkMode={darkMode} setDarkMode={setDarkMode}/>
       </header>
 
       <main>
-        <Hero />
+        {/* <MainPage /> */}
 
-        {/* Only in desktop resolution */}
-        <Sponsors />
 
-        <AppFeatures />
-
-        <Slider />
-        
-        <AppFeatures2 />
-
-        <Testimonials />
-        
-        <Faq />
-
-        <Subscribe />
+        <ContactPage />
       </main>
 
       <Footer />

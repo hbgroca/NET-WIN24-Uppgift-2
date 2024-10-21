@@ -9,8 +9,8 @@ export default function PopUp() {
 
   return (<>
   
-  <div class="login-pop-up">
-    <button id="close" class="btn-primary button" onClick={LoginPressed}>X</button>
+  <div className="login-pop-up">
+    <button id="close" className="btn-primary button" onClick={LoginPressed}>X</button>
     <h4>Sign in</h4>
     <form>
         <div>
@@ -22,8 +22,8 @@ export default function PopUp() {
             <input type="password"/>
         </div>
         <div className='buttons'>
-            <button class="btn btn-md">New user</button>
-            <button class="btn btn-md">Sign in</button>
+            <button className="btn btn-md">New user</button>
+            <button className="btn btn-md">Sign in</button>
             {/* <input type="submit" value="Sign in" class="btn btn-md"/> */}
         </div>
     </form>

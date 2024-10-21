@@ -11,7 +11,7 @@ import siliconLogo from '/images/svg/navbar/SiliconLogo.svg';
 import AsideNavMenu from '../components/AsideNavMenu';
 import PopUp from '../components/PopUp/PopUp';
 
-export default function Navbar() {
+export default function Navbar({ darkMode, setDarkMode }) {
   return (<>
     <nav className="navbar container">
       <div className="navbar-left">
@@ -27,7 +27,7 @@ export default function Navbar() {
       <div className="navbar-right">
           {/* Dark mode toggle */}
 
-          <BtnDarkMode />
+          <BtnDarkMode darkMode={darkMode} setDarkMode={setDarkMode}/>
           {/* Hamburger menu button */}
           <BtnHamburger />
           

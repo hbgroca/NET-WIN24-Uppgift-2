@@ -1,5 +1,4 @@
 import '../css/hero.css';
-import BtnStore from "../components/BtnStore";
 import { useEffect } from 'react';
 
 export default function Hero() {
@@ -9,11 +8,9 @@ export default function Hero() {
       // Change apple and google store svg
       document.getElementById("appleStore").src = `./images/svg/hero/appstore-dark.svg`;
       document.getElementById("googleStore").src = `./images/svg/hero/googleplay-dark.svg`;
-      // darkMode = true;
     }else{
         document.getElementById("appleStore").src = `./images/svg/hero/appstore-light.svg`;
         document.getElementById("googleStore").src = `./images/svg/hero/googleplay-light.svg`;
-        // darkMode = false;
     }
   },);
 
@@ -49,10 +46,5 @@ export default function Hero() {
         </div>
       </div>
   </div>
-
-
-    {/* <BtnStore className="appleStore" imageUrl='./images/svg/hero/appstore-light.svg' ariaLabel="Länk till Apple Store"/> */}
-
-
   </>);
 };
