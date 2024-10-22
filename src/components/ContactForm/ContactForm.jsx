@@ -8,14 +8,16 @@ export default function ContactForm() {
   const [emailInput, setEmailInput] = useState(null);
   const [specialistInput, setSpecialistInput] = useState(null);
 
-  // Set input fields to state on mount
+  // Get input fields to state on mount
   useEffect(() => {
     setErrorInput(document.querySelector('.error-name'));
     setSpecialistInput(document.querySelector('.specialist-name'));
     setEmailInput(document.querySelector('.error-email'));
   }, []);
 
-  const validateForm = (e) => {
+
+  // Validate form function
+  const validateForm = () => {
     // Prevent reloading of site
     e.preventDefault();
 
@@ -56,11 +58,12 @@ export default function ContactForm() {
           
         } else {
           // Display Fail
-          alert('Fuck.. it did`t work');
+          alert('F#ck.. it did`t work');
         }
       })
     }
   };
+
 
   function submitContactForm() {
     return fetch('https://win24-assignment.azurewebsites.net/api/forms/contact', {
@@ -121,6 +124,7 @@ export default function ContactForm() {
     return true;
   };
 
+
   function validateSpecialist(specialist) {
     // Clear previous error message
     specialistInput.style.display = 'none';
@@ -137,36 +141,36 @@ export default function ContactForm() {
 
 
   return(<>
-  <div className="contact-form">
-    <h2 className='heading'>Get Online Consultation</h2>
-          
-    <div className='contact-form-inputs'>
-      <p className='text'>Full name</p>
-      <input type="text" id="inputtext" />
-      <small className='error-name'>Please enter your full name above.</small>
-    
-      <p className='text'>Email adress</p>
-      <input type="mail" id="inputmail" />
-      <small className='error-email'>Enter your email above.</small>
-    
-      <p className='text'> Specialist</p>
+    <div className="contact-form">
+      <h2 className='heading'>Get Online Consultation</h2>
+            
+      <div className='contact-form-inputs'>
+        <p className='text'>Full name</p>
+        <input type="text" id="inputtext" />
+        <small className='error-name'>Please enter your full name above.</small>
+      
+        <p className='text'>Email adress</p>
+        <input type="mail" id="inputmail" />
+        <small className='error-email'>Enter your email above.</small>
+      
+        <p className='text'> Specialist</p>
 
-      <select name="specialist" id="inputspec">
+        <select name="specialist" id="inputspec">
 
-        <option value="">--Please choose an option--</option>
-        <option value="Sales">Sales</option>
-        <option value="Finacials">Finacials</option>
-        <option value="Gynecologist ">Gynecologist </option>
-        <option value="Complaints">Complaints</option>
+          <option value="">--Please choose an option--</option>
+          <option value="Sales">Sales</option>
+          <option value="Finacials">Finacials</option>
+          <option value="Gynecologist ">Gynecologist </option>
+          <option value="Complaints">Complaints</option>
+      
+        </select>
+        <small className='specialist-name'>Please select one of the options from the list above.</small>
+        </div>
+
+        <h4 className='contact-form-success'>You have succesfully made an appointment and will be contacted shortly.</h4>
     
-      </select>
-      <small className='specialist-name'>Please select one of the options from the list above.</small>
-      </div>
-
-      <h4 className='contact-form-success'>You have succesfully made an appointment and will be contacted shortly.</h4>
-  
-    <input id='submit-appointment' className='btn' type="submit" value="Make an appointment" onClick={validateForm} />
-  
-  </div>
+      <input id='submit-appointment' className='btn' type="submit" value="Make an appointment" onClick={validateForm} />
+    
+    </div>
   </>);
 };

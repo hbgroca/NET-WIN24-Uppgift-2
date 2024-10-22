@@ -1,7 +1,18 @@
 import '../css/hero.css';
 import { useEffect } from 'react';
 
-export default function Hero() {
+export default function Hero({ darkMode }) {
+
+  useEffect(() => {
+    if(localStorage.getItem("darkMode") === "true"){
+      // Change apple and google store svg
+      document.getElementById("appleStore").src = `./images/svg/hero/appstore-dark.svg`;
+      document.getElementById("googleStore").src = `./images/svg/hero/googleplay-dark.svg`;
+    }else{
+        document.getElementById("appleStore").src = `./images/svg/hero/appstore-light.svg`;
+        document.getElementById("googleStore").src = `./images/svg/hero/googleplay-light.svg`;
+    }
+  },[darkMode]);
 
   useEffect(() => {
     if(localStorage.getItem("darkMode") === "true"){

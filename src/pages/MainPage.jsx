@@ -8,12 +8,13 @@ import Testimonials from '../sections/Testimonials'
 import Faq from '../sections/faq'
 
 
-export default function MainPage() {
+
+export default function MainPage({ darkMode }) {
 
 
 
   return (<>
-      <Hero />
+      <Hero darkMode={darkMode}/>
 
       {/* Only in desktop resolution */}
       <Sponsors />
