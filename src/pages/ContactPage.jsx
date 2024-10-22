@@ -1,10 +1,11 @@
+import ContactForm from '../components/ContactForm/ContactForm';
 import './ContactPage.css';
 
 export default function ContactPage() {
   return(<>
     <div className="background"></div>
       <div className="contact-page container">
-        <div className="contact">
+        <div className="contact-wrapper">
         
         <h1>Contact Us</h1>
 
@@ -25,24 +26,11 @@ export default function ContactPage() {
               </div>
             </div>
         </div>
-       
+      
+      
+      <ContactForm />
 
-
-        <div className="contact-form">
-          
-          <h2 className='heading'>Get Online Consultation</h2>
-          <p className='text'>Full name</p>
-          <input type="text" name="" id="" />
-
-          <p className='text'>Email adress</p>
-          <input type="mail" name="" id="" />
-
-          <p className='text'> Specialist</p>
-          <select name="" id=""></select>
-
-          <input className='btn' type="submit" value="Make and appointment" />
-
-        </div>
+        
     </div>
 
     <div className="map container">

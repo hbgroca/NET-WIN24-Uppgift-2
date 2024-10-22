@@ -36,20 +36,20 @@ export default function InputSubscribe() {
         // Handle response
         response.then(response => {
           if(response === 200){
-            errorMsgText.textContent = 'Tack för att du prenumererar!';
+            errorMsgText.textContent = 'Thank you for subscribing!';
             setEmail('')
             document.getElementById('email-input').value = ''
           } else {
-            errorMsgText.textContent = 'Något gick fel, försök igen senare';
+            errorMsgText.textContent = 'Something went wrong, please try again later';
           }
         })
 
         break
       case 'false':
-        errorMsgText.textContent = 'Ogiltig epost adress'
+        errorMsgText.textContent = 'Not a valid email'
         break
       case 'noInput':
-        errorMsgText.textContent = 'Ange en epost adress'
+        errorMsgText.textContent = 'Please enter an email'
         break
     }
   }
@@ -80,8 +80,10 @@ export default function InputSubscribe() {
       body: JSON.stringify({ email: emailInput })
     })
     .then(response => {
-      return response.status; // Read response as text
-    })
+      return response.status;
+    }).catch((error) => {
+      console.error('Failed to subscribe:', error);
+    });
 };
 
 

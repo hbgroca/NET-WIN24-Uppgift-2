@@ -21,10 +21,10 @@ function App() {
       </header>
 
       <main>
-        {/* <MainPage /> */}
+        <MainPage />
 
 
-        <ContactPage />
+        {/* <ContactPage /> */}
       </main>
 
       <Footer />
