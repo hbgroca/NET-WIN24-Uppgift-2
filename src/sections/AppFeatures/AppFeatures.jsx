@@ -1,4 +1,4 @@
-import '../css/AppFeatures.css';
+import './AppFeatures.css';
 
 export default function AppFeatures() { 
 

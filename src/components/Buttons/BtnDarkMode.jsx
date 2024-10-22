@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import '../css/BtnDarkMode.css';
+import './BtnDarkMode.css';
 
-function BtnDarkMode({ darkMode, setDarkMode }) {
+function BtnDarkMode({ darkMode, changeTheme }) {
 
   // On load of page
   useEffect(() => {
@@ -15,7 +15,7 @@ function BtnDarkMode({ darkMode, setDarkMode }) {
   }, []);
 
   function toggleDarkMode(e) {
-    setDarkMode(!darkMode);
+    changeTheme();
     document.body.classList.toggle("dark-mode");
     e.target.classList.toggle("btn-darkmode-active");
     localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));

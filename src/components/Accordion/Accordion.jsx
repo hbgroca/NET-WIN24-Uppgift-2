@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import '../css/accordion.css';
+import './accordion.css';
 
 export default function Accordion(){
 
@@ -30,7 +30,7 @@ export default function Accordion(){
     return (
         <div className="faq-faqs">
             {faqs.map((faq, index) => (
-                <div key={index} id={"faq-faqs-" + index} className="card-faq" onClick={()=>{faqExpand(index)}}>
+                <div key={faq.id} id={"faq-faqs-" + index} className="card-faq" onClick={()=>{faqExpand(index)}}>
                     <div className="question">
                         <h6>{faq.title}</h6>
                         <button className="btn-rounded-md btn-rounded" alt="" aria-hidden="true"></button>

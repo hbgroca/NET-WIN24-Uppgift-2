@@ -17,7 +17,7 @@ export default function ContactForm() {
 
 
   // Validate form function
-  const validateForm = () => {
+  const validateForm = (e) => {
     // Prevent reloading of site
     e.preventDefault();
 

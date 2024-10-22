@@ -1,6 +1,6 @@
 // Image imports
 import signIn from '/images/svg/navbar/Sign-in.svg';
-import '../css/BtnSignIn.css'
+import './BtnSignIn.css'
 
 
 export default function BtnSignIn(props) {

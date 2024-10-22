@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import '../css/AsideNavMenu.css';
+import './AsideNavMenu.css';
 
 export default function AsideNavMenu() {
   

@@ -3,10 +3,9 @@ import { createBrowserRouter, Route, Routes, Link, NavLink, createRoutesFromElem
 import React, { useState } from 'react';
 
 // Import sections
-import ContactPage from './pages/ContactPage';
+import ContactPage from './pages/ContactPage/ContactPage';
 import MainPage from './pages/MainPage';
-import Footer from './sections/Footer'
-import Navbar from './sections/Navbar'
+import Navbar from './sections/Navbar/Navbar'
 import RootLayout from './layout/RootLayout';
 
 
@@ -22,15 +21,14 @@ const router = createBrowserRouter(
   )
 );
 
+
+
 function App() {
-  // Darkmode
-  // const [darkMode, setDarkMode] = useState(false);
-  
   return (
     <>
       <main>
         {/* Router */}
-        <RouterProvider router={router}/>
+        <RouterProvider router={router} />
       </main>
     </>
   )

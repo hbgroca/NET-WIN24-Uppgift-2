@@ -1,4 +1,4 @@
-import '../css/BtnHamburger.css';
+import './BtnHamburger.css';
 
 function BtnHamburger(){
 

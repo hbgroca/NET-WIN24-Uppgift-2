@@ -1,10 +1,10 @@
-import '../css/hero.css';
+import './hero.css';
 import { useEffect } from 'react';
 
 export default function Hero({ darkMode }) {
 
   useEffect(() => {
-    if(localStorage.getItem("darkMode") === "true"){
+    if(darkMode){
       // Change apple and google store svg
       document.getElementById("appleStore").src = `./images/svg/hero/appstore-dark.svg`;
       document.getElementById("googleStore").src = `./images/svg/hero/googleplay-dark.svg`;

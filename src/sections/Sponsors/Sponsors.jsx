@@ -1,6 +1,6 @@
-import CardSponsor from "../components/Card-sponsor";
-import '../css/sponsors.css';
-import '../css/cards.css';
+import CardSponsor from "./Card-sponsor";
+import './sponsors.css';
+import '../../css/cards.css';
 
 export default function Sponsors() {
   return(

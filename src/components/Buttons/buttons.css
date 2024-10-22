@@ -50,6 +50,10 @@
   line-height: 1.6;
 }
 
+.btn-square {
+  border-radius: 0;
+}
+
 /* App store and Android Store */
 .btn-store {
   height: 51px;

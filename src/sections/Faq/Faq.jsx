@@ -1,6 +1,6 @@
-import Accordion from "../components/Accordion";
-import Contact from "../components/Contact";
-import '../css/faq.css';
+import Accordion from "../../components/Accordion/Accordion";
+import Contact from "../../components/Contact/Contact";
+import './faq.css';
 
 export default function Faq() {
   return (

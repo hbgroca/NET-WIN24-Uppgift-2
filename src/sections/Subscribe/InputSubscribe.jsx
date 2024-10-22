@@ -75,16 +75,21 @@ export default function InputSubscribe() {
     return fetch('https://win24-assignment.azurewebsites.net/api/forms/subscribe', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/JSON'
       },
       body: JSON.stringify({ email: emailInput })
     })
     .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      console.log('Subscribed:', response);
       return response.status;
-    }).catch((error) => {
+    })
+    .catch((error) => {
       console.error('Failed to subscribe:', error);
     });
-};
+  };
 
 
   return (

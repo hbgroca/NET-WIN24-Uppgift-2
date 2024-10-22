@@ -1,4 +1,5 @@
 import './PopUp.css'
+import '../Buttons/buttons.css'
 
 export default function PopUp() {
 
@@ -10,7 +11,7 @@ export default function PopUp() {
   return (<>
   
   <div className="login-pop-up">
-    <button id="close" className="btn-primary button" onClick={LoginPressed}>X</button>
+    <button id="close" className="btn-sm btn" onClick={LoginPressed}>X</button>
     <h4>Sign in</h4>
     <form>
         <div>
@@ -19,7 +20,7 @@ export default function PopUp() {
         </div>
         <div>
             <p>Password</p>
-            <input type="password"/>
+            <input type="password" autoComplete='true'/>
         </div>
         <div className='buttons'>
             <button className="btn btn-md">New user</button>

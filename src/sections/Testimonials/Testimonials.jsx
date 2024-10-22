@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import CardTestimonial from '../components/Card-Testimonial';
-import '../css/Testimonials.css';
+import CardTestimonial from './Card-Testimonial';
+import './Testimonials.css';
 
 export default function Testimonials() {
 
@@ -10,9 +10,9 @@ export default function Testimonials() {
   // Get testimonials from API
   useEffect(() => {
     fetch('https://win24-assignment.azurewebsites.net/api/testimonials')
-      .then(response => response.json())
-      .then(data => setTestimonials(data))
-      .catch(error => console.error('Failed to fetch:', error));
+      .then(response => response.json()) // Parse JSON
+      .then(data => setTestimonials(data)) // Set state
+      .catch(error => console.error('Failed to fetch:', error)); // Log potential error
   }, []);
 
 
@@ -20,19 +20,18 @@ export default function Testimonials() {
     <div className="reviews">
       <div className="reviews-container container">
           <div className="reviews-header">
-              <h2 className="reviews-header-text">Clients are<br></br> Loving Our App</h2>
+              <h2 className="reviews-header-text">Clients are<br /> Loving Our App</h2>
           </div>
           <div className="flex gap-8">
-            {testimonials.map((testimonial, index) => {
-              return (
+            {testimonials.map((testimonial) => (
                 <CardTestimonial 
-                  key={index}
+                  key={testimonial.id}
                   stars={testimonial.starRating}
                   text={testimonial.comment}
                   user={testimonial.author}
                   jobRole={testimonial.jobRole}
                   avatar={testimonial.avatarUrl}
-                />)})}
+                />))}
           </div>
       </div>
     </div>

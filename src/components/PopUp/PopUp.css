@@ -6,8 +6,8 @@
   height: 315px;
   z-index: 99;
 
-  background-color: rgba(255, 255, 255, 0.075);
-  backdrop-filter: blur(7px);
+  background-color: var(--clr-bg-popup);
+  backdrop-filter: blur(15px);
   border: black 1px solid;
   border-radius: 0.5rem;
 
@@ -37,6 +37,10 @@
     padding: 0.25rem;
     border-radius: 0.25rem;
     border: none;
+  }
+  h4,
+  p {
+    color: var(--clr-text-popup);
   }
 }
 

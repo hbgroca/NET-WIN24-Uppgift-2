@@ -1,9 +1,9 @@
 // Image imports
 import BellIcon from '/images/svg/subscribe/notification-icon-1.svg';
 // Component imports
-import InputSubscribe from '../components/InputSubscribe';
+import InputSubscribe from './InputSubscribe';
 // CSS imports
-import '../css/Subscribe.css';
+import './Subscribe.css';
 import { useEffect } from 'react';
 
 export default function Subscribe() {

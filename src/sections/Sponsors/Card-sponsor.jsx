@@ -1,5 +1,5 @@
-import '../css/cards.css';
-import '../css/sponsors.css';
+import '../../css/cards.css';
+import './sponsors.css';
 
 export default function CardSponsor({ imageUrl, className }) {
   return (

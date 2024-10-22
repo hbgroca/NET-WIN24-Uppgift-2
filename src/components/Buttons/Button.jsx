@@ -1,4 +1,4 @@
-import '../css/Button.css'
+import './Buttons.css'
 
 
 export default function Button(props) {
