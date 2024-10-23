@@ -37,10 +37,10 @@ function LoginPressed(){
   return (<>
     <nav id="nav-aside" className="navbar-side">
       <div className="navbar-side-links">
-        <NavLink to="/" aria-label="Go to features." onClick={buttonPressed}>Home</NavLink>
-        <NavLink onClick={handleNavigation} aria-label="Navigate to features.">Features</NavLink>
-        <NavLink to="/contact" aria-label="Go to contact page." onClick={buttonPressed}>Contact</NavLink>
-        <a href="#" aria-label="Sign in to your account." onClick={LoginPressed}>Sign in / up</a>
+        <NavLink to="/" aria-label="Go to features." onClick={buttonPressed}><span>Home</span></NavLink>
+        <NavLink onClick={handleNavigation} aria-label="Navigate to features."><span>Features</span></NavLink>
+        <NavLink to="/contact" aria-label="Go to contact page." onClick={buttonPressed}><span>Contact</span></NavLink>
+        <a href="#" aria-label="Sign in to your account." onClick={LoginPressed}><span>Sign in / up</span></a>
       </div>
     </nav>
   </>);

@@ -2,6 +2,10 @@
 
 Inlämningsuppgift - Javascript
 
+Fantasiskt rolig uppgift som har lärt mig massor av nya sätt att lösa problem på. Jag hade lite svårt att förstå varför man vill använda react till en början men det är ju riktigt trevlig att arbeta med.
+
+Det har inte varit några större konstigheter under processen att skapa denna sida. Fick inte navigationen via Router att vilja scrolla till en specifik section så där fick jag hjälp av CHAT GPT. Jag får även ett meddelande som lyder "Fetch failed loading:POST" trots att jag får Response OK 200. Är det möjligen för att servern bara är en dummy?
+
 ## Kriterier för att få godkänt på denna inlämningsuppgift :
 
 - Du ska bygga upp en sida med hjälp av React. &#10003;

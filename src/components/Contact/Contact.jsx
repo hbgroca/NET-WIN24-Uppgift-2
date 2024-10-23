@@ -16,10 +16,7 @@ export default function Contact() {
               <p>Dont't like phone calls?</p>
               <NavLink to="/contact">Contact us <img src="/images/svg/arrow-right-green.svg"/></NavLink>
           </div>
-          
-          
-          <Button classes="btn-lg contact-btn" text={<NavLink to="/contact">Contact us now</NavLink>}/>
-          
+          <NavLink to="/contact" className="btn btn-lg contact-btn">Contact us now</NavLink>
       </div>
   </>);
 };

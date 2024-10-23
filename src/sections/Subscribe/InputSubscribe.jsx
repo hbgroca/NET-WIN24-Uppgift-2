@@ -12,30 +12,30 @@ export default function InputSubscribe() {
     })
   }, [])
 
-  // Update email state on render
-  useEffect(() => {
-    const emailInput = document.getElementById('email-input')
-    setEmail(emailInput.value)
-  }
-  , )
-
   // On submit
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); 
 
+    // Get email error message element
     const errorMsgText = document.getElementById('email-error-text')
+
+    console.log("Skickar epost: " + email)
+    
     switch(validateEmail(email)){
       case 'true':
+        console.log("Email adress was valid: " + email)
+
         // Reset error message
         errorMsgText.textContent = ''
 
         // Post email to api
         const response = postEmail(email);
 
-        // Handle response
+        // Handle response and update UI
         response.then(response => {
           if(response === 200){
             errorMsgText.textContent = 'Thank you for subscribing!';
+            // Reset email input
             setEmail('')
             document.getElementById('email-input').value = ''
           } else {
@@ -76,7 +76,8 @@ export default function InputSubscribe() {
       headers: {
         'Content-Type': 'application/json; charset=UTF-8'
       },
-      body: JSON.stringify({ email: emailInput })
+      body: JSON.stringify({ email: emailInput }),
+      mode: 'cors' // Add this line
     }).then(response => {
       if (response.ok) { // Check if response is ok
         console.log('Response:', response);
