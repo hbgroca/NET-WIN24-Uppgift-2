@@ -7,6 +7,7 @@ import ContactPage from './pages/ContactPage/ContactPage';
 import MainPage from './pages/MainPage';
 import Navbar from './sections/Navbar/Navbar'
 import RootLayout from './layout/RootLayout';
+import Error404 from './pages/404/Error404';
 
 
 // Router things learnt from Net ninja on Youtube
@@ -17,6 +18,8 @@ const router = createBrowserRouter(
       <Route index element={<MainPage />} />
       <Route path='contact' element={<ContactPage />} />
       <Route path='navbar' element={<Navbar />} />
+      <Route path='*' element={<Error404 />} />
+      
     </Route>
   )
 );

@@ -41,9 +41,9 @@ export default function ContactForm() {
 
     // If all input fields are valid we can submit the form
     if (validName && validEmail && validSpecialist) {
+      
       // Submit form
       const submitResponse = submitContactForm();
-
       // Handle response
       submitResponse.then(status => {
         if(status === 200){
@@ -77,6 +77,7 @@ export default function ContactForm() {
         'Content-type': 'application/json; charset=UTF-8',
       },
     }).then(response => {
+      console.log('Response:', response);
       return response.status;
     }).catch((error) => {
       console.error('Failed to submit:', error);

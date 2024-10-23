@@ -1,7 +1,25 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import './AsideNavMenu.css';
 
 export default function AsideNavMenu() {
+
+// Chat GPT code. Could't figure out how to get it to scroll to the features section after navigating to the main page.
+const navigate = useNavigate();
+
+const handleNavigation = () => {
+  // Clise the side menu
+  buttonPressed();
+  // Navigate to the main page
+  navigate('/');
+
+  // Wait for the page to load and then scroll to the features section
+  setTimeout(() => {
+    const section = document.getElementById('features');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, 100); // Timeout to make shure the page has loaded
+};
   
 // Close side menu when a link is clicked
 function buttonPressed(){
@@ -20,7 +38,7 @@ function LoginPressed(){
     <nav id="nav-aside" className="navbar-side">
       <div className="navbar-side-links">
         <NavLink to="/" aria-label="Go to features." onClick={buttonPressed}>Home</NavLink>
-        <NavLink to="/#features" aria-label="Go to features." onClick={buttonPressed}>Features</NavLink>
+        <NavLink onClick={handleNavigation} aria-label="Navigate to features.">Features</NavLink>
         <NavLink to="/contact" aria-label="Go to contact page." onClick={buttonPressed}>Contact</NavLink>
         <a href="#" aria-label="Sign in to your account." onClick={LoginPressed}>Sign in / up</a>
       </div>

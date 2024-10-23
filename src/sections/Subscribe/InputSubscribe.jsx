@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 
 export default function InputSubscribe() {
-  
-
+  // State for email
   const [email, setEmail] = useState('')
 
   // Create event listener for email input
@@ -22,7 +21,7 @@ export default function InputSubscribe() {
 
   // On submit
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     const errorMsgText = document.getElementById('email-error-text')
     switch(validateEmail(email)){
@@ -71,23 +70,22 @@ export default function InputSubscribe() {
 
 
   // Post email to api
-  function postEmail(emailInput) {
+  const postEmail = (emailInput) => {
     return fetch('https://win24-assignment.azurewebsites.net/api/forms/subscribe', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/JSON'
+        'Content-Type': 'application/json; charset=UTF-8'
       },
       body: JSON.stringify({ email: emailInput })
-    })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+    }).then(response => {
+      if (response.ok) { // Check if response is ok
+        console.log('Response:', response);
+        return response.status;
+      } else {
+          throw new Error('Network response was not ok');
       }
-      console.log('Subscribed:', response);
-      return response.status;
-    })
-    .catch((error) => {
-      console.error('Failed to subscribe:', error);
+    }).catch(error => { // Error handling
+      console.error(error);
     });
   };
 

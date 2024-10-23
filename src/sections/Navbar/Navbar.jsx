@@ -1,5 +1,4 @@
-import { NavLink } from "react-router-dom";
-import { useState } from "react"
+import { NavLink, useNavigate } from "react-router-dom";
 
 // CSS imports
 import './Navbar.css'
@@ -16,6 +15,24 @@ import AsideNavMenu from './AsideNavMenu';
 import PopUp from '../../components/PopUp/PopUp';
 
 export default function Navbar({ darkMode, changeTheme }) {
+
+  // Chat GPT code. Could't figure out how to get it to scroll to the features section after navigating to the main page.
+  const navigate = useNavigate();
+
+  const handleNavigation = () => {
+    // Navigate to the main page
+    navigate('/');
+
+    // Wait for the page to load and then scroll to the features section
+    setTimeout(() => {
+      const section = document.getElementById('features');
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100); // Timeout to make shure the page has loaded
+  };
+
+
   return (<>
   
     <nav className="navbar container">
@@ -25,7 +42,7 @@ export default function Navbar({ darkMode, changeTheme }) {
               <NavLink className='navbar-logo-text' to="/" aria-label="Navigate to main page."><h5 className='navbar-logo-text'>Silicon</h5></NavLink>
           </div>
           <div className="navbar-links">
-              <NavLink to="/#features" aria-label="Navigare to features.">Features</NavLink>
+              <NavLink onClick={handleNavigation} aria-label="Navigate to features.">Features</NavLink>
               <NavLink to="contact" aria-label="Navigare to contact page.">Contact</NavLink>
           </div>
       </div>
