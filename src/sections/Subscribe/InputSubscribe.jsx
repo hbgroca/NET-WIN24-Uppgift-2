@@ -98,7 +98,7 @@ export default function InputSubscribe() {
               <img src='/images/svg/subscribe/email-svgrepo-com.svg' alt="" aria-hidden="true"></img>
               <input id="email-input" type="email" placeholder="Your email" required></input>
           </div>
-          <input type="submit" value="Subscribe" onClick={handleSubmit}></input>
+          <input id="submit" type="submit" value="Subscribe" onClick={handleSubmit}></input>
           <span id="email-error-text"></span>
       </form>
     </>

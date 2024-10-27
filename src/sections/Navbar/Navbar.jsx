@@ -42,7 +42,7 @@ export default function Navbar({ darkMode, changeTheme }) {
               <NavLink className='navbar-logo-text' to="/" aria-label="Navigate to main page."><h5 className='navbar-logo-text'>Silicon</h5></NavLink>
           </div>
           <div className="navbar-links">
-              <NavLink onClick={handleNavigation} aria-label="Navigate to features.">Features</NavLink>
+              <NavLink onClick={handleNavigation} to='/#features' aria-label="Navigate to features.">Features</NavLink>
               <NavLink to="contact" aria-label="Navigare to contact page.">Contact</NavLink>
           </div>
       </div>

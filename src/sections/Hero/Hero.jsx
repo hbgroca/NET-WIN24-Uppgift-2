@@ -1,6 +1,7 @@
 import './hero.css';
 import { useEffect } from 'react';
 
+// darkMode is passed from RootLayout.jsx
 export default function Hero({ darkMode }) {
 
   useEffect(() => {

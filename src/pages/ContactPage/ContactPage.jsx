@@ -1,37 +1,40 @@
 import ContactForm from '../../components/ContactForm/ContactForm';
 import './ContactPage.css';
 
+import Breadcrumb from '../../components/Breadcrumb/Breadcrumb';
 
 export default function ContactPage() {
   return(<>
     <div className="background"></div>
-      <div className="contact-page container">
-        <div className="contact-wrapper">
-        
-          <h1>Contact Us</h1>
+      <div className='container'>
+        <Breadcrumb />
 
-          <div className='contact-page-card'> 
-          <div className='logo'><img src="./images/svg/ContactPage/mail-icon.svg" alt="" /></div>
-            <div>
-              <h3>Email us</h3>
-              <p>Please feel free to drop us a line. We will respond as soon as possible.</p>
-              <a className='arrow'  href="#">Leave a message <img className='arrow' src="./images/svg/arrow-right-blue.svg" alt="" /></a>
+        <div className="contact-page">
+          <div className="contact-wrapper">
+          
+            <h1>Contact Us</h1>
+
+            <div className='contact-page-card'> 
+            <div className='logo'><img src="./images/svg/ContactPage/mail-icon.svg" alt="" /></div>
+              <div>
+                <h3>Email us</h3>
+                <p>Please feel free to drop us a line. We will respond as soon as possible.</p>
+                <a className='arrow'  href="#">Leave a message <img className='arrow' src="./images/svg/arrow-right-blue.svg" alt="" /></a>
+              </div>
+            </div>
+            <div className='contact-page-card'>
+              <div className='logo'><img src="./images/svg/ContactPage/careers-icon.svg" alt="" /></div>
+              <div>
+                <h3>Careers</h3>
+                <p>Sit ac ipsum leo lorem magna nunc mattis maecenas non vestibulum.</p>
+                <a className='arrow' href="#">Send an application <img src="./images/svg/arrow-right-blue.svg" alt="" /></a>
+              </div>
             </div>
           </div>
-          <div className='contact-page-card'>
-            <div className='logo'><img src="./images/svg/ContactPage/careers-icon.svg" alt="" /></div>
-            <div>
-              <h3>Careers</h3>
-              <p>Sit ac ipsum leo lorem magna nunc mattis maecenas non vestibulum.</p>
-              <a className='arrow' href="#">Send an application <img src="./images/svg/arrow-right-blue.svg" alt="" /></a>
-            </div>
-          </div>
+        <ContactForm />
       </div>
-
-      <ContactForm />
-
-      </div>
-
+    </div>
+      
       <div className="map container">
         <div className="image-container">
           <img src="./images/svg/ContactPage/map.svg" alt="" />

@@ -33,7 +33,7 @@ export default function Accordion(){
                 <div key={faq.id} id={"faq-faqs-" + index} className="card-faq" onClick={()=>{faqExpand(index)}}>
                     <div className="question">
                         <h6>{faq.title}</h6>
-                        <button className="btn-rounded-md btn-rounded" alt="" aria-hidden="true"></button>
+                        <button className="btn-rounded-md btn-rounded"></button>
                     </div>
                     <div className="answer">
                         <p className='expandable'>{faq.content}</p>

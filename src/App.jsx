@@ -1,6 +1,5 @@
 // Import components
-import { createBrowserRouter, Route, Routes, Link, NavLink, createRoutesFromElements, RouterProvider } from 'react-router-dom';
-import React, { useState } from 'react';
+import { createBrowserRouter, Route, createRoutesFromElements, RouterProvider } from 'react-router-dom';
 
 // Import sections
 import ContactPage from './pages/ContactPage/ContactPage';
@@ -19,7 +18,6 @@ const router = createBrowserRouter(
       <Route path='contact' element={<ContactPage />} />
       <Route path='navbar' element={<Navbar />} />
       <Route path='*' element={<Error404 />} />
-      
     </Route>
   )
 );

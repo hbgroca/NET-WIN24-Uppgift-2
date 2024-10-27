@@ -12,7 +12,7 @@
 .contact-page {
   display: flex;
   justify-content: space-between;
-  margin-top: 3rem;
+  /* margin-top: 3rem; */
   min-height: 768px;
   max-height: 1024px;
   padding-inline: 1rem;
