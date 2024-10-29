@@ -3,14 +3,11 @@ import { useState, useEffect } from "react";
 export default function InputSubscribe() {
   // State for email
   const [email, setEmail] = useState('')
+  const [subscribed, setSubscribed] = useState(false)
 
-  // Create event listener for email input
-  useEffect (() => {
-    const emailInput = document.getElementById('email-input')
-    emailInput.addEventListener('input', () => {
-      setEmail(emailInput.value)
-    })
-  }, [])
+  const handleInput = (e) => {
+    setEmail(e.target.value)
+  };
 
   // On submit
   const handleSubmit = (e) => {
@@ -34,10 +31,9 @@ export default function InputSubscribe() {
         // Handle response and update UI
         response.then(response => {
           if(response === 200){
-            errorMsgText.textContent = 'Thank you for subscribing!';
-            // Reset email input
+            setSubscribed(true);
             setEmail('')
-            document.getElementById('email-input').value = ''
+
           } else {
             errorMsgText.textContent = 'Something went wrong, please try again later';
           }
@@ -77,7 +73,7 @@ export default function InputSubscribe() {
         'Content-Type': 'application/json; charset=UTF-8'
       },
       body: JSON.stringify({ email: emailInput }),
-      mode: 'cors' // Add this line
+      mode: 'cors'
     }).then(response => {
       if (response.ok) { // Check if response is ok
         console.log('Response:', response);
@@ -93,13 +89,17 @@ export default function InputSubscribe() {
 
   return (
     <>
-      <form className="form-subscribe" action="">
-          <div className="form-subscribe-wrapper">
+      <form className={subscribed ? "form-subscribe subscribed" : "form-subscribe"} action="" noValidate onSubmit={handleSubmit}>
+          <div className="form-subscribe-wrapper" id="disable">
               <img src='/images/svg/subscribe/email-svgrepo-com.svg' alt="" aria-hidden="true"></img>
-              <input id="email-input" type="email" placeholder="Your email" required></input>
+              <input id="email-input" type="email" placeholder="Your email" required onChange={handleInput} value={email}></input>
           </div>
-          <input id="submit" type="submit" value="Subscribe" onClick={handleSubmit}></input>
+          <input id="submit" type="submit" value="Subscribe"></input>
           <span id="email-error-text"></span>
+
+          <div className="isSubscribed">
+            <h4>Yay, you are now subscribed to our newsletter</h4>
+          </div>
       </form>
     </>
   );

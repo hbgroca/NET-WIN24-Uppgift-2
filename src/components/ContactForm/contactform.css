@@ -5,13 +5,12 @@
   height: 700px;
   width: 50%;
   background-color: white;
-  padding: 4rem;
+  padding: 3rem 4rem;
 
   align-self: center;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 
   p,
   h2 {
@@ -47,7 +46,7 @@
   }
 
   input[type="submit"] {
-    margin-top: 8rem;
+    /* margin-top: 8rem; */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
@@ -60,12 +59,16 @@
     display: none;
   }
 }
+.contact-form-inputs {
+  width: 100%;
+}
 
 .contact-form-success {
   display: none;
   color: #000;
 
   text-align: left;
+  padding-top: 3rem;
 }
 
 .submitted {
