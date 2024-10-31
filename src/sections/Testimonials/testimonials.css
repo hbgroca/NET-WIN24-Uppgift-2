@@ -20,6 +20,10 @@
   }
 }
 .reviews-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
   .reviews-header-text {
     font-size: 2.125rem;
     padding: 3rem 0;

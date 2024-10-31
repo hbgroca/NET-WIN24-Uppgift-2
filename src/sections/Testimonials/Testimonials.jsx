@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import CardTestimonial from './Card-Testimonial';
 import './Testimonials.css';
+import { Link } from 'react-router-dom';
 
 export default function Testimonials() {
 
@@ -21,6 +22,8 @@ export default function Testimonials() {
       <div className="reviews-container container">
           <div className="reviews-header">
               <h2 className="reviews-header-text">Clients are<br /> Loving Our App</h2>
+              {/* <button className="btn btn-lg">More reviews</button> */}
+              <Link to="/testimonials" className="btn btn-lg">More reviews</Link>
           </div>
           <div className="flex gap-8">
             {testimonials.map((testimonial) => (

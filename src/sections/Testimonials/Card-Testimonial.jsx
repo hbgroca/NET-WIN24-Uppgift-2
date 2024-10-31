@@ -8,13 +8,13 @@ export default function CardTestimonial({ stars, text, user, jobRole , avatar}) 
 
     // Map through the array and return the correct star image based on there being a true or false value.
     return allStars.map((isFilled, index) => (
-      <img key={index} src={isFilled ? "./images/svg/reviews/star.svg" : "./images/svg/reviews/star_empty.svg"} alt={isFilled ? "Stjärna." : "Tom stjärna."}/>
+      <img key={index} src={isFilled ? "/images/svg/reviews/star.svg" : "/images/svg/reviews/star_empty.svg"} alt={isFilled ? "Stjärna." : "Tom stjärna."}/>
     ));
   }
 
   return(<>
     <div className="card-review">
-      <img className="card-review-quotes" src="./images/svg/reviews/quotes.svg" alt=""/>
+      <img className="card-review-quotes" src="/images/svg/reviews/quotes.svg" alt=""/>
 
       <div className="card-review-stars ">
         {starsRating()}

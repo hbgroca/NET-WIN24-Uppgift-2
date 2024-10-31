@@ -1,11 +1,14 @@
 // Import components
 import { createBrowserRouter, Route, createRoutesFromElements, RouterProvider } from 'react-router-dom';
 
+// Import layout
+import RootLayout from './layout/RootLayout';
+
 // Import sections
-import ContactPage from './pages/ContactPage/ContactPage';
 import MainPage from './pages/MainPage';
 import Navbar from './sections/Navbar/Navbar'
-import RootLayout from './layout/RootLayout';
+import ContactPage from './pages/ContactPage/ContactPage';
+import Testimonials from './pages/Testimonials/TestimonialsPage';
 import Error404 from './pages/404/Error404';
 
 
@@ -17,6 +20,7 @@ const router = createBrowserRouter(
       <Route index element={<MainPage />} />
       <Route path='contact' element={<ContactPage />} />
       <Route path='navbar' element={<Navbar />} />
+      <Route path='testimonials' element={<Testimonials />} />
       <Route path='*' element={<Error404 />} />
     </Route>
   )
