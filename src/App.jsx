@@ -11,6 +11,9 @@ import ContactPage from './pages/ContactPage/ContactPage';
 import Testimonials from './pages/Testimonials/TestimonialsPage';
 import Error404 from './pages/404/Error404';
 
+// Import context
+import ReviewsProvider from './contexts/ReviewsContext';
+
 
 // Router things learnt from Net ninja on Youtube
 // https://www.youtube.com/playlist?list=PL4cUxeGkcC9iVKmtNuCeIswnQ97in2GGf
@@ -32,8 +35,10 @@ function App() {
   return (
     <>
       <main>
-        {/* Router */}
-        <RouterProvider router={router} />
+        <ReviewsProvider>
+          {/* Router */}
+          <RouterProvider router={router} />
+        </ReviewsProvider>
       </main>
     </>
   )

@@ -44,8 +44,10 @@
     display: block;
     width: 100%;
     height: -100%;
+  }
 
-    @media (min-width: 1280px) {
+  @media (min-width: 1280px) {
+    .subscribe-text::before {
       content: "Subscribe to our newsletter to stay informed about latest updates";
     }
   }

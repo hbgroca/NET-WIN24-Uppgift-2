@@ -1,8 +1,22 @@
 .footer {
   /* outline: 1px solid red; */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   text-align: center;
   padding-top: 3rem;
   padding-bottom: 1rem;
+
+  span{
+    font-size: 0.8rem;
+    font-style: italic;
+    font-weight: 300;
+  }
+}
+
+.links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .25rem;
 }

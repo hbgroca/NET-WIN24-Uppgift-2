@@ -1,32 +1,29 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import CardTestimonial from './Card-Testimonial';
 import './Testimonials.css';
 import { Link } from 'react-router-dom';
 
+import { ReviewsProvider } from '../../contexts/ReviewsContext';
+
 export default function Testimonials() {
 
   // State for testimonials
-  const [testimonials, setTestimonials] = useState([]);
+  const { testimonials } = useContext(ReviewsProvider);
 
-  // Get testimonials from API
-  useEffect(() => {
-    fetch('https://win24-assignment.azurewebsites.net/api/testimonials')
-      .then(response => response.json()) // Parse JSON
-      .then(data => setTestimonials(data)) // Set state
-      .catch(error => console.error('Failed to fetch:', error)); // Log potential error
-  }, []);
-
+  // Get the two first testiominials
+  const testimonialsSliced = testimonials.slice(0, 2);
 
   return (<>
     <div className="reviews">
       <div className="reviews-container container">
-          <div className="reviews-header">
+          <div className="reviews-header ">
               <h2 className="reviews-header-text">Clients are<br /> Loving Our App</h2>
-              {/* <button className="btn btn-lg">More reviews</button> */}
               <Link to="/testimonials" className="btn btn-lg">More reviews</Link>
           </div>
-          <div className="flex gap-8">
-            {testimonials.map((testimonial) => (
+
+          {/* Review cards */}
+          <div className="reviews-list">
+            {testimonialsSliced.map((testimonial) => (
                 <CardTestimonial 
                   key={testimonial.id}
                   stars={testimonial.starRating}

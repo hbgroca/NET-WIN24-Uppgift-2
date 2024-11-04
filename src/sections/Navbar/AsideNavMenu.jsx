@@ -7,7 +7,7 @@ export default function AsideNavMenu() {
 const navigate = useNavigate();
 
 const handleNavigation = () => {
-  // Clise the side menu
+  // Close the side menu
   buttonPressed();
   // Navigate to the main page
   navigate('/');
@@ -40,6 +40,7 @@ function LoginPressed(){
         <NavLink to="/" aria-label="Go to features." onClick={buttonPressed}><span>Home</span></NavLink>
         <NavLink onClick={handleNavigation} aria-label="Navigate to features."><span>Features</span></NavLink>
         <NavLink to="/contact" aria-label="Go to contact page." onClick={buttonPressed}><span>Contact</span></NavLink>
+        <NavLink to="/testimonials" aria-label="Navigare to reviews page." onClick={buttonPressed}>Reviews</NavLink>
         <a href="#" aria-label="Sign in to your account." onClick={LoginPressed}><span>Sign in / up</span></a>
       </div>
     </nav>

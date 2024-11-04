@@ -25,10 +25,11 @@
 
 .navbar-links {
   display: none;
-  gap: 1.5rem;
+  
   font-weight: 600;
   font-size: 1.1rem;
   color: var(--clr-navbar-text);
+  
 }
 
 @media (min-width: 768px) {
@@ -37,9 +38,13 @@
   }
   .navbar-links {
     display: flex;
+    /* width: clamp(220px, 0%, 340px); */
+    width: 210px;
+    justify-content: space-between;
   }
 }
-
-/* .active {
-  border-bottom: 2px solid var(--clr-logo-text);
-} */
+@media (min-width: 825px) {
+  .navbar-links {
+    width: 250px;
+  }
+}

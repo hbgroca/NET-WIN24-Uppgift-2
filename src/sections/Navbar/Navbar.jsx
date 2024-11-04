@@ -43,7 +43,8 @@ export default function Navbar({ darkMode, changeTheme }) {
           </div>
           <div className="navbar-links">
               <NavLink onClick={handleNavigation} to='/#features' aria-label="Navigate to features.">Features</NavLink>
-              <NavLink to="contact" aria-label="Navigare to contact page.">Contact</NavLink>
+              <NavLink to="/contact" aria-label="Navigare to contact page.">Contact</NavLink>
+              <NavLink to="/testimonials" aria-label="Navigare to reviews page.">Reviews</NavLink>
           </div>
       </div>
       <div className="navbar-right">
